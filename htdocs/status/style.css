@@ -1,11 +1,18 @@
-
-.info {
-    font-size:.8em;
-    color:#333;
+body {
+    font-family: sans-serif;
 }
 p {
     margin-top: 12px;
     width: 400px;
+    margin-bottom: 0;
+}
+p.info {
+    font-size:.8em;
+    color:#333;
+    margin-top: 0px;
+
+    padding-bottom: 12px;
+    border-bottom: 1px dotted #666;
 }
 .status{
     font-size:14pt;
