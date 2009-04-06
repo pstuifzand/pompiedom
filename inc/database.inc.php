@@ -1,6 +1,9 @@
 <?
+error_reporting(E_ALL);
 
-require_once '../../inc/config.inc.php' 
+require_once 'config.inc.php';
+require_once 'util.inc.php';
+
 
 function database_init() {
     $link = mysql_connect(DB_HOST, DB_USER, DB_PASS);
@@ -16,7 +19,7 @@ function get_messages($link) {
     while ($row = mysql_fetch_assoc($res)) { 
         $message = $row['message'];
         $message = linkify_html($message);
-        $messsages[] = array('message' => $message, 'created' => $row['created']
+        $messages[] = array('message' => $message, 'created' => $row['created']);
     }
     return $messages;
 }

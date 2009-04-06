@@ -1,6 +1,6 @@
 <?
-require_once '../../inc/util.inc.php' 
-require_once '../../inc/database.inc.php' 
+error_reporting(E_ALL);
+require_once '../../inc/database.inc.php';
 ?>
 <html>
 <head>
@@ -14,7 +14,7 @@ require_once '../../inc/database.inc.php'
 $link = database_init();
 $messages = get_messages($link);
 
-foreach ($messages => $message) {
+foreach ($messages as $message) {
 ?>
 <p><?= $message['message'] ?></p>
 <p class="info">Posted by <? echo USERNAME ?> on <span class="created"><?= $message['created'] ?></p>

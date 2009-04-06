@@ -1,6 +1,6 @@
 <?
-require_once '../../inc/util.inc.php' 
-require_once '../../inc/database.inc.php' 
+require_once '../../inc/util.inc.php';
+require_once '../../inc/database.inc.php';
 
 $link = database_init();
 $message = get_first_message($link);

@@ -19,7 +19,7 @@ require_once '../../../inc/database.inc.php';
 $link = database_init();
 $messages = get_messages($link);
 
-foreach ($messages => $message) {
+foreach ($messages as $message) {
 ?>
 <p><?= $message['message'] ?></p>
 <p class="info">Posted by <? echo USERNAME ?> on <span class="created"><?= $message['created'] ?></p>
