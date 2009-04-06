@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Simple status example</title>
+</head>
+<body>
+
+<!-- actual code -->
+<h4>Status</h4>
+<div id="status"></div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script>
+function update_status() {
+    $.get('/status/status.php', {}, function(data) {
+        $('#status').html(data);
+        setTimeout(function() { update_status() }, 5 * 60 * 1000);
+    });
+}
+$(document).ready(function() {
+    update_status();
+});
+</script>
+<!-- end of actual code -->
+
+</body>
+</html>
+
