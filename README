@@ -1,3 +1,28 @@
 
 Pompiedom - simple small status update program
 
+
+TO INSTALL
+
+1. Download a copy from github.com/pstuifzand/pompiedom
+2. Create a symbolic link to inc and htdocs/status
+3. Copy config.sample.inc.php to config.inc.php
+4. Create a database in MySQL
+5. Fill in the config values in config.inc.php
+
+    The user of the database only needs SELECT and INSERT privileges.
+
+        - DB_HOST    database host
+        - DB_USER    database user
+        - DB_PASS    database pass
+        - DB_DATABASE database name
+        - USERNAME   the username that is shown below every status message
+6. Use HTTP authentication to protect the admin directory.
+
+URLs:
+
+http://domain/status/            - list of last 15 messages
+http://domain/status/admin/      - admin interface with textarea
+http://domain/status/status.php  - Ajax enabled last message  
+                                    see pompiedom/htdocs/index.html for a sample
+
