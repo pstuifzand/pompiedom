@@ -35,8 +35,8 @@ function get_first_message($link) {
 }
 
 function save_message($link, $message) {
-    $message = mysql_real_escape_string($_POST['message'], $link);
-    mysql_query("INSERT INTO `tweet` (`message`) VALUES('$message')", $link);
+    $message = mysql_real_escape_string($message, $link);
+    mysql_query("INSERT INTO `tweet` (`message`, `created`) VALUES('$message', UTC_TIMESTAMP())", $link);
     return true;
 }
 
