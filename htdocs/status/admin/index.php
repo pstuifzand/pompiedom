@@ -9,7 +9,7 @@
 <p style="float:left">What are you doing?</p><span style="color:#888;float:right;font-size:33pt" id="counter"></span>
 
 <form action="/status/admin/post.php" method="post">
-    <textarea name='message' rows='2' cols='80' id='status'></textarea>
+    <textarea name='message' rows='2' cols='55' id='status'></textarea><br/>
     <input type='submit' value='Update' />
 </form>
 
