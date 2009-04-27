@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^status/(\d+)   /status/status.php?id=$1
